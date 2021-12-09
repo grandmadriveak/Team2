@@ -10,13 +10,17 @@ namespace Team2.Repository
     {
         public List<T> list;
 
+        public Repository() {
+            list = new List<T>();
+        }
+
         public bool Add(T Entity)
         {
             try
             {
                 list.Add(Entity);
                 return true;
-            } catch (ArgumentNullException)
+            } catch (Exception)
             {
                 return false;
             }           
