@@ -28,7 +28,16 @@ namespace Team2.Repository
 
         public bool Delete(object id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                T entity = GetById(id);
+                list.Remove(entity);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public List<T> Get()
