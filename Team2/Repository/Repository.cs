@@ -36,9 +36,21 @@ namespace Team2.Repository
             throw new NotImplementedException();
         }
 
+        public T GetById(object id)
+        {
+            return list.Find((Predicate<T>)id);
+        }
+
         public bool Update(T Entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                return true;
+            } catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

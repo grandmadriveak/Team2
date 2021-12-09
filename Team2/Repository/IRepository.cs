@@ -12,5 +12,6 @@ namespace Team2.Repository
         bool Add(T Entity);
         bool Update(T Entity);
         bool Delete(object id);
+        T GetById(object id);
     }
 }
